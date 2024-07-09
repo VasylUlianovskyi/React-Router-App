@@ -3,11 +3,10 @@ import UserCard from "./UserCard";
 
 function App() {
   const user = {
-    photo:
-      "https://img.etimg.com/thumb/msid-68885634,width-650,height-488,imgsize-364466,resizemode-75/emmawatson.jpg",
-    firstName: "Emma",
-    lastName: "Watson",
-    username: "emwatson",
+    photo: "https://ichef.bbci.co.uk/images/ic/1200x675/p096hbwt.jpg",
+    firstName: "Mark",
+    lastName: "Aurelius",
+    username: "m_aurelius",
     gender: "male",
     tweets: 1337,
     following: 561,
