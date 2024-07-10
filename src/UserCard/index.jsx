@@ -11,13 +11,14 @@ function UserCard({ user }) {
     display: "flex",
     flexDirection: "column",
     positon: "relative",
-    margin: "100px",
-    boxShadow: "0 0 10px 2px silver",
     borderRadius: "10px",
     padding: "0",
     maxWidth: "250px",
     textAlign: "center",
-    boxShadow: like ? "0 0 10px 2px red" : "0 0 10px 2px grey",
+    boxShadow:
+      user.gender === "male"
+        ? "0 0 10px 5px rgb(126 179 244) "
+        : "0 0 10px 5px rgb(255, 192, 203)",
     overflow: "hidden",
     fontFamily: "Arial, sans-serif",
   };
@@ -84,7 +85,7 @@ function UserCard({ user }) {
         {like ? (
           <i className="fa-solid fa-heart" style={{ color: "red" }}></i>
         ) : (
-          <i className="fa-regular fa-heart"></i>
+          <i className="fa-regular fa-heart" style={{ color: "grey" }}></i>
         )}
       </button>
     </article>
