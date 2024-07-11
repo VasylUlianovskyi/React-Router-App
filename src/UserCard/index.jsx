@@ -10,10 +10,12 @@ function UserCard({ user }) {
   const userCardStyle = {
     display: "flex",
     flexDirection: "column",
-    positon: "relative",
+    position: "relative",
     borderRadius: "10px",
     padding: "0",
+    minWidth: "100px",
     maxWidth: "250px",
+    width: "100%",
     textAlign: "center",
     boxShadow:
       user.gender === "male"
@@ -24,8 +26,8 @@ function UserCard({ user }) {
   };
 
   const userInfoWrapper = {
-    position: "relative",
-    bottom: "100px",
+    position: "absolute",
+    bottom: "140px",
     width: "100%",
     color:
       user.gender === "male"
@@ -83,7 +85,10 @@ function UserCard({ user }) {
       </button>
       <button className={style.likeBtn} onClick={likeHandle}>
         {like ? (
-          <i className="fa-solid fa-heart" style={{ color: "red" }}></i>
+          <i
+            className="fa-solid fa-heart"
+            style={{ color: "red", opacity: "0.7" }}
+          ></i>
         ) : (
           <i className="fa-regular fa-heart" style={{ color: "grey" }}></i>
         )}
