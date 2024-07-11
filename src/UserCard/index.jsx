@@ -87,7 +87,7 @@ function UserCard({ user }) {
         {like ? (
           <i
             className="fa-solid fa-heart"
-            style={{ color: "red", opacity: "0.7" }}
+            style={{ color: "red", opacity: "0.6" }}
           ></i>
         ) : (
           <i className="fa-regular fa-heart" style={{ color: "grey" }}></i>
