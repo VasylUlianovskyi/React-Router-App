@@ -5,7 +5,7 @@ function UserCard({ user }) {
   const [followers, setFollowers] = useState(user.followers);
   const [initialFollowers] = useState(user.followers);
   const [followed, setFollowed] = useState(false);
-  const [like, setlike] = useState(false);
+  const [like, setLike] = useState(false);
 
   const userCardStyle = {
     display: "flex",
@@ -45,8 +45,14 @@ function UserCard({ user }) {
     setFollowed(!followed);
   };
 
+  const followedBtnIcon = followed ? (
+    <i className="fa-solid fa-check"></i>
+  ) : (
+    <i className="fa-solid fa-plus"></i>
+  );
+
   const likeHandle = () => {
-    setlike(!like);
+    setLike(!like);
   };
 
   return (
@@ -77,11 +83,7 @@ function UserCard({ user }) {
         </div>
       </div>
       <button className={style.followBtn} onClick={handleFollow}>
-        {followed ? (
-          <i className="fa-solid fa-check"></i>
-        ) : (
-          <i className="fa-solid fa-plus"></i>
-        )}
+        {followedBtnIcon}
       </button>
       <button className={style.likeBtn} onClick={likeHandle}>
         {like ? (
