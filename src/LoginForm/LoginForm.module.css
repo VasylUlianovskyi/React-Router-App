@@ -59,6 +59,7 @@
   flex-direction: column;
   gap: 5px;
   padding: 5px;
+  position: relative;
 }
 
 
@@ -67,6 +68,14 @@ input {
   padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.527);
   border-radius: 5px;
+}
+
+.regEyeBtn {
+  position: absolute;
+  right: 12px;
+  top: 35px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 
@@ -106,7 +115,7 @@ input {
   right: -1px;
   padding: 1px 0px 1px 0px;
   border: 1px solid grey;
-  font-size: 10px;
+  font-size: 8px;
   background-color: #5da378;
   border-radius: 2px;
   color: white;
