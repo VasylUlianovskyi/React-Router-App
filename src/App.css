@@ -1,11 +1,3 @@
 * {
   box-sizing: border-box;
 }
-
-#root {
-  display: flex;
-  gap: 49px;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-}
