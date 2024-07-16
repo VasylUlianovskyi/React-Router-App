@@ -1,0 +1,140 @@
+.loginFormArticle {
+  max-width: 350px;
+  min-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px auto;
+  gap: 10px;
+  box-shadow: 0 0 5px grey;
+  border-radius: 5px;
+  align-items: center;
+  color: #5da378;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.icon {
+  font-size: 24px;
+  color: white;
+
+}
+
+.createAccountIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #79db9f;
+  border-radius: 50px;
+  margin: 10px;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginFormTitle {
+  font-size: 20px;
+  color: rgb(56, 56, 56);
+  margin: 0;
+  padding: 0;
+}
+
+
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+
+.loginForm {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+
+
+input {
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.527);
+  border-radius: 5px;
+}
+
+
+.checkbox {
+  margin: 15px;
+  color: grey;
+  font-size: 11px;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+}
+
+.chekedIcon {
+  display: none;
+}
+
+.newCheckboxIcon {
+  width: 12px;
+  height: 12px;
+  border: 1px solid grey;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 2px;
+  margin: 3px;
+}
+
+[type=checkbox]:checked+.newCheckboxIcon:before {
+  display: flex;
+  justify-content: center;
+  content: "\2714";
+  position: absolute;
+  object-fit: contain;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  padding: 1px 0px 1px 0px;
+  border: 1px solid grey;
+  font-size: 10px;
+  background-color: #5da378;
+  border-radius: 2px;
+  color: white;
+}
+
+.loginBtn {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #79db9f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.loginBtn:disabled {
+  background-color: #86b197;
+  cursor: default;
+}
+
+.link {
+  color: rgba(56, 56, 56);
+  font-size: 11px;
+  align-self: start
+}
+
+.singInLink {
+  color: #79db9f;
+  text-decoration: none;
+}
