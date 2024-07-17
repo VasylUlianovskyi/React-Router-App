@@ -5,7 +5,7 @@
   display: flex;
   background-color: #6495ed;
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 0px 50px;
   padding: 10px;
   justify-content: space-around;
   text-align: center;
@@ -40,7 +40,7 @@ h3 {
 }
 
 .weatherInfo {
-  font-size: 13px;
+  font-size: ;
 }
 
 @media (max-width:320px) {

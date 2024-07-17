@@ -5,8 +5,8 @@ import Weather from "./WeatherWidget/Weather";
 function App() {
   return (
     <>
-      {/* <UserList />
-      <LoginForm /> */}
+      <UserList />
+      <LoginForm />
       <Weather />
     </>
   );
