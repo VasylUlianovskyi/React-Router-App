@@ -63,11 +63,15 @@
 }
 
 
-
-input {
+.formInput {
   padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.527);
   border-radius: 5px;
+}
+
+.formInput:focus {
+  border: 1px solid rgba(128, 128, 128, 0.527);
+  outline: none;
 }
 
 .regEyeBtn {
@@ -146,4 +150,14 @@ input {
 .singInLink {
   color: #79db9f;
   text-decoration: none;
+}
+
+.valid {
+  border: 1px solid #5da378c5;
+  background-color: #b6f0ccc2;
+}
+
+.invalid {
+  border: 1px solid #a84d4d96;
+  background-color: #e2b6aeb9;
 }
