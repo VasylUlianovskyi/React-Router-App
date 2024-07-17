@@ -94,6 +94,7 @@
 
 .chekedIcon {
   display: none;
+
 }
 
 .newCheckboxIcon {
@@ -106,6 +107,7 @@
   border-radius: 2px;
   padding: 2px;
   margin: 3px;
+  cursor: pointer;
 }
 
 [type=checkbox]:checked+.newCheckboxIcon:before {
@@ -120,7 +122,7 @@
   padding: 1px 0px 1px 0px;
   border: 1px solid grey;
   font-size: 8px;
-  background-color: #5da378;
+  background-color: #71c792;
   border-radius: 2px;
   color: white;
 }
