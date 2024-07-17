@@ -1,0 +1,50 @@
+.weatherEL {
+  max-width: 400px;
+  min-width: 250px;
+  width: 100%;
+  display: flex;
+  background-color: #6495ed;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  justify-content: space-around;
+  text-align: center;
+  gap: 10px;
+}
+
+.weather,
+.weatherForecast {
+  display: flex;
+  flex-direction: column;
+  background-color: #87cefa;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 5px
+}
+
+.title {
+  text-align: start;
+}
+
+.weatherForecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.weatherInfo {
+  font-size: 13px;
+}
+
+@media (max-width:320px) {
+  .weatherEL {
+    flex-wrap: wrap;
+  }
+}
