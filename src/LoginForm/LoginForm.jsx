@@ -50,7 +50,7 @@ function LoginForm() {
     e.preventDefault();
 
     setFullName("");
-    console.log(setFullName(""));
+
     setEmail("");
     setPassword("");
     setConfirmPassword("");
