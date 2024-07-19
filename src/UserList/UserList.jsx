@@ -59,14 +59,14 @@ function UserList() {
 
   function deleteUser(e, userIndex) {
     e.stopPropagation();
-    const newUsersArray = users.filter((users, index) => index !== userIndex);
+    const newUsersArray = users.filter((_, index) => index !== userIndex);
     setUsers(newUsersArray);
   }
 
-  const mapUserList = (user, id, index) => {
+  const mapUserList = (user, index) => {
     return (
       <UserListItem
-        key={id}
+        key={user.id}
         user={user}
         userIndex={index}
         changeActiveUser={() => changeActiveUser(index)}
