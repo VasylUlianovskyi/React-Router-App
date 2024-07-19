@@ -1,8 +1,8 @@
+import { useState } from "react";
+import classNames from "classnames";
 import { IoCreateOutline } from "react-icons/io5";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import styles from "./LoginForm.module.css";
-import classNames from "classnames";
-import { useState } from "react";
 
 const LOGIN_FORM_REG_EXP = {
   fullname: /^[A-Za-z]+\s[A-Za-z]+$/,
@@ -10,16 +10,16 @@ const LOGIN_FORM_REG_EXP = {
   password: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[\d]).{8,32}$/,
 };
 function LoginForm() {
-  const [fullname, setFullName] = useState("");
+  const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const [passwConfirmation, setPasswConfirmation] = useState("");
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isCheked, setIsCheked] = useState(false);
 
   const checkFullName = ({ target: { value } }) => {
-    setFullName(value);
+    setFullname(value);
   };
 
   const checkValidEmail = ({ target: { value } }) => {
@@ -31,16 +31,16 @@ function LoginForm() {
   };
 
   const confirmPasswordValue = ({ target: { value } }) => {
-    setConfirmPassword(value);
+    setPasswConfirmation(value);
   };
 
   const checkBoxCheked = ({ target: { value } }) => {
     setIsCheked(!isCheked);
   };
 
-  const passwordVisibility = (type) => {
+  const changePasswordVisibility = (type) => {
     if (type === "password") {
-      setShowPassword(!showPassword);
+      setIsPasswordVisible(!isPasswordVisible);
     } else if (type === "confirmPassword") {
       setShowConfirmPassword(!showConfirmPassword);
     }
@@ -49,11 +49,11 @@ function LoginForm() {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
-    setFullName("");
+    setFullname("");
 
     setEmail("");
     setPassword("");
-    setConfirmPassword("");
+    setPasswConfirmation("");
   };
 
   const setIntupsClassName = (name, value) => {
@@ -76,16 +76,16 @@ function LoginForm() {
     });
   };
 
-  const passwordIcon = (type, showPassword) =>
-    showPassword ? (
+  const passwordIcon = (type, isPasswordVisible) =>
+    isPasswordVisible ? (
       <FaRegEyeSlash
         className={styles.regEyeBtn}
-        onClick={() => passwordVisibility(type)}
+        onClick={() => changePasswordVisibility(type)}
       />
     ) : (
       <FaRegEye
         className={styles.regEyeBtn}
-        onClick={() => passwordVisibility(type)}
+        onClick={() => changePasswordVisibility(type)}
       />
     );
 
@@ -125,21 +125,21 @@ function LoginForm() {
           <span className={styles.inputCaption}>Password</span>
           <input
             className={setIntupsClassName("password", password)}
-            type={showPassword ? "text" : "password"}
+            type={isPasswordVisible ? "text" : "password"}
             name="password"
             required
             value={password}
             onChange={checkValidPassword}
           />
-          {passwordIcon("password", showPassword)}
+          {passwordIcon("password", isPasswordVisible)}
         </label>
         <label className={styles.loginForm}>
           <span className={styles.inputCaption}>Confirm Password</span>
           <input
-            className={setConfirmPasswordClassName(password, confirmPassword)}
+            className={setConfirmPasswordClassName(password, passwConfirmation)}
             type={showConfirmPassword ? "text" : "password"}
             name="confirmPassword"
-            value={confirmPassword}
+            value={passwConfirmation}
             onChange={confirmPasswordValue}
             required
           />

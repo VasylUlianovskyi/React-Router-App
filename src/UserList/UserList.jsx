@@ -1,6 +1,6 @@
 import { useState } from "react";
 import UserListItem from "./UserListItem";
-import styles from "../UserList/UserList.module.css";
+import styles from "./UserList.module.css";
 
 const USERS = [
   {
@@ -46,7 +46,7 @@ const USERS = [
 ];
 
 function UserList() {
-  const [users, setUser] = useState(USERS);
+  const [users, setUsers] = useState(USERS);
 
   function changeActiveUser(selectedUserIndex) {
     const usersArrCopy = [...users];
@@ -54,19 +54,19 @@ function UserList() {
     usersArrCopy[selectedUserIndex].isActive =
       !usersArrCopy[selectedUserIndex].isActive;
 
-    setUser(usersArrCopy);
+    setUsers(usersArrCopy);
   }
 
   function deleteUser(e, userIndex) {
     e.stopPropagation();
     const newUsersArray = users.filter((users, index) => index !== userIndex);
-    setUser(newUsersArray);
+    setUsers(newUsersArray);
   }
 
-  const mapUserList = (user, index) => {
+  const mapUserList = (user, id, index) => {
     return (
       <UserListItem
-        key={index}
+        key={id}
         user={user}
         userIndex={index}
         changeActiveUser={() => changeActiveUser(index)}
@@ -75,11 +75,7 @@ function UserList() {
     );
   };
 
-  return (
-    <>
-      <ul className={styles.userList}>{users.map(mapUserList)}</ul>
-    </>
-  );
+  return <ul className={styles.userList}>{users.map(mapUserList)}</ul>;
 }
 
 export default UserList;

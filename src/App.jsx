@@ -1,7 +1,6 @@
 import LoginForm from "./LoginForm/LoginForm";
 import UserList from "./UserList/UserList";
 import Weather from "./WeatherWidget/Weather";
-
 function App() {
   return (
     <>

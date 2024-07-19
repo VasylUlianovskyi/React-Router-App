@@ -1,7 +1,6 @@
 import classNames from "classnames";
-import styles from "../UserList/UserListItem.module.css";
-
 import { FaTrash } from "react-icons/fa";
+import styles from "./UserListItem.module.css";
 
 function UserListItem({ user, userIndex, changeActiveUser, deleteUser }) {
   const activeUser = classNames(styles.userListItm, {

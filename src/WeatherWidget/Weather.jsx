@@ -5,7 +5,7 @@ import { FaThermometerHalf } from "react-icons/fa";
 import styles from "./Weather.module.css";
 
 const WEATHER_API =
-  "https://api.open-meteo.com/v1/forecast?latitude=49.8383&longitude=24.0232&hourly=temperature_2m,wind_speed_10m&forecast_days=1";
+  "https://api.open-meteo.com/v1/forecast?latitude=49.8383&longitude=24.0232&current=temperature_2m,wind_speed_10m&forecast_days=1";
 
 function Weather() {
   const [weather, setWeather] = useState(null);
@@ -50,22 +50,10 @@ function Weather() {
           <h3>Current Weather</h3>
           <p className={styles.weatherInfo}>
             <FaThermometerHalf />
-            <span>
-              {
-                weather?.hourly?.temperature_2m[
-                  weather?.hourly?.temperature_2m.length - 1
-                ]
-              }
-            </span>
+            <span>{weather?.current?.temperature_2m}</span>
           </p>
           <p className={styles.weatherInfo}>
-            <FaWind />{" "}
-            <span>
-              {weather?.hourly?.wind_speed_10m &&
-                weather.hourly.wind_speed_10m[
-                  weather.hourly.wind_speed_10m.length - 1
-                ]}
-            </span>
+            <FaWind /> <span>{weather?.current?.wind_speed_10m}</span>
           </p>
         </section>
       </article>

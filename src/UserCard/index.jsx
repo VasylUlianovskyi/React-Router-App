@@ -86,14 +86,7 @@ function UserCard({ user }) {
         {followedBtnIcon}
       </button>
       <button className={style.likeBtn} onClick={likeHandle}>
-        {like ? (
-          <i
-            className="fa-solid fa-heart"
-            style={{ color: "red", opacity: "0.6" }}
-          ></i>
-        ) : (
-          <i className="fa-regular fa-heart" style={{ color: "grey" }}></i>
-        )}
+        {followedBtnIcon}
       </button>
     </article>
   );
