@@ -132,11 +132,3 @@ table {
 * {
   box-sizing: border-box;
 }
-
-#root {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1350px;
-  margin: auto;
-}
