@@ -92,7 +92,7 @@ function Slider({ images }) {
           <RxTrackNext />
         </button>
 
-        <input type="text" value={delay / 1000} onChange={handleInterval} />
+        <input type="number" value={delay / 1000} onChange={handleInterval} />
         <button
           className={styles.fullScreenBtn}
           onClick={handleFullScreenChange}
