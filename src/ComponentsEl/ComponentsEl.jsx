@@ -9,6 +9,7 @@ import LoginForm from "../LoginForm/LoginForm";
 import UserList from "../UserList/UserList";
 import Weather from "../WeatherWidget/Weather";
 import Slider from "../Slider/index";
+import NotFound from "../NotFound";
 import styles from "./ComponentsEl.module.sass";
 
 const user = {
@@ -76,6 +77,7 @@ function ComponentsEl() {
           <Route path="/loginform" element={<LoginForm />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/slider" element={<Slider images={images} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
