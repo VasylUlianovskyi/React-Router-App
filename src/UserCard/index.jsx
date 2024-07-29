@@ -12,7 +12,7 @@ function UserCard({ user }) {
     flexDirection: "column",
     position: "relative",
     borderRadius: "10px",
-    margin: "30px auto",
+    margin: "150px auto",
     padding: "0",
     minWidth: "100px",
     maxWidth: "250px",

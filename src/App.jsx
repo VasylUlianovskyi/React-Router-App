@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import BasePage from "./BasePage";
 import HomeEl from "./HomeEl/HomeEl";
 import ComponentsEl from "./ComponentsEl/ComponentsEl";
+import About from "./About";
 import NotFound from "./NotFound";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<BasePage />}>
           <Route index element={<HomeEl />} />
           <Route path="/components/*" element={<ComponentsEl />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
