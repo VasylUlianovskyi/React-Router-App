@@ -21,28 +21,13 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/usercard" style={linkStyle}>
-              UserCard
+            <NavLink to="/components" style={linkStyle}>
+              Components
             </NavLink>
           </li>
           <li>
-            <NavLink to="/userlist" style={linkStyle}>
-              UserList
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/loginform" style={linkStyle}>
-              LoginForm
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/weather" style={linkStyle}>
-              Weather
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/slider" style={linkStyle}>
-              Slider
+            <NavLink to="/about" style={linkStyle}>
+              About
             </NavLink>
           </li>
         </ul>
