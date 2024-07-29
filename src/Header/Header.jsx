@@ -1,12 +1,4 @@
-import {
-  Link,
-  NavLink,
-  Outlet,
-  Route,
-  BrowserRouter as Router,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { NavLink, BrowserRouter as Router } from "react-router-dom";
 
 import styles from "./Header.module.sass";
 
