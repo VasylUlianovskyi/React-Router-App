@@ -133,9 +133,9 @@ table {
   box-sizing: border-box;
 }
 
-body {
+#root {
   display: flex;
-  justify-content: center;
-  background: url("https://images.wallpaperscraft.com/image/single/starry_sky_stars_night_1205423_1280x720.jpg");
-  background-size: cover;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }

@@ -12,6 +12,7 @@ function UserCard({ user }) {
     flexDirection: "column",
     position: "relative",
     borderRadius: "10px",
+    margin: "30px auto",
     padding: "0",
     minWidth: "100px",
     maxWidth: "250px",
@@ -86,7 +87,11 @@ function UserCard({ user }) {
         {followedBtnIcon}
       </button>
       <button className={style.likeBtn} onClick={likeHandle}>
-        {followedBtnIcon}
+        {like ? (
+          <i className="fa-solid fa-heart" style={{ color: "red" }}></i>
+        ) : (
+          <i className="fa-regular fa-heart" style={{ color: "grey" }}></i>
+        )}
       </button>
     </article>
   );

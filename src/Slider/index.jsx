@@ -30,6 +30,16 @@ function Slider({ images }) {
     }
   }, [isPaused, delay, images.length]);
 
+  useEffect(() => {
+    const fullscreenchangeHandler = () => setIsFullScreen((e) => !e);
+
+    document.addEventListener("fullscreenchange", fullscreenchangeHandler);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", fullscreenchangeHandler);
+    };
+  }, []);
+
   const handlePlayChange = () => {
     setIsPaused((pause) => !pause);
   };
@@ -63,7 +73,6 @@ function Slider({ images }) {
         console.error("Error attempting to exit full-screen mode:", err);
       });
     }
-    setIsFullScreen((e) => !e);
   };
 
   return (
@@ -92,7 +101,12 @@ function Slider({ images }) {
           <RxTrackNext />
         </button>
 
-        <input type="number" value={delay / 1000} onChange={handleInterval} />
+        <input
+          className={styles.sliderInput}
+          type="number"
+          value={delay / 1000}
+          onChange={handleInterval}
+        />
         <button
           className={styles.fullScreenBtn}
           onClick={handleFullScreenChange}
