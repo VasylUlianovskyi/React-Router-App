@@ -34,7 +34,7 @@ function LoginForm() {
     setPasswConfirmation(value);
   };
 
-  const checkBoxCheked = ({ target: { value } }) => {
+  const checkBoxCheked = ({ target: {} }) => {
     setIsCheked(!isCheked);
   };
 

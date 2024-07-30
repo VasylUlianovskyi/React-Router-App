@@ -1,4 +1,4 @@
-import styles from "./HomeEl/HomeEl.module.sass";
+import styles from "../HomeEl/HomeEl.module.sass";
 
 function NotFound() {
   return (
