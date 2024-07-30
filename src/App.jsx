@@ -1,10 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import BasePage from "./BasePage";
+import BasePage from "./BasePage/BasePage";
 import HomeEl from "./HomeEl/HomeEl";
 import ComponentsEl from "./ComponentsEl/ComponentsEl";
-import About from "./About";
-import NotFound from "./NotFound";
+import About from "./About/About";
+import NotFound from "./NotFound/NotFound";
 
 function App() {
   return (
