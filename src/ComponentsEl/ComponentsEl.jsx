@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { useState } from "react";
 import UserCard from "../UserCard/index";
 import LoginForm from "../LoginForm/LoginForm";
 import UserList from "../UserList/UserList";
@@ -42,36 +43,73 @@ const images = [
 ];
 
 function ComponentsEl() {
+  const [show, setShow] = useState(false);
+
+  const handleClick = () => {
+    setShow(true);
+  };
+
+  const hideEl = () => {
+    setShow(false);
+  };
   return (
     <div className={styles.componentsWrapper}>
       <ul className={styles.componentsList}>
         <li>
-          <NavLink to="usercard" style={linkStyle}>
+          <NavLink
+            to="usercard"
+            style={linkStyle}
+            onClick={handleClick}
+            onMouseLeave={hideEl}
+          >
             UserCard
           </NavLink>
         </li>
         <li>
-          <NavLink to="userlist" style={linkStyle}>
+          <NavLink
+            to="userlist"
+            style={linkStyle}
+            onClick={handleClick}
+            onMouseLeave={hideEl}
+          >
             UserList
           </NavLink>
         </li>
         <li>
-          <NavLink to="loginform" style={linkStyle}>
+          <NavLink
+            to="loginform"
+            style={linkStyle}
+            onClick={handleClick}
+            onMouseLeave={hideEl}
+          >
             LoginForm
           </NavLink>
         </li>
         <li>
-          <NavLink to="weather" style={linkStyle}>
+          <NavLink
+            to="weather"
+            style={linkStyle}
+            onClick={handleClick}
+            onMouseLeave={hideEl}
+          >
             Weather
           </NavLink>
         </li>
         <li>
-          <NavLink to="slider" style={linkStyle}>
+          <NavLink
+            to="slider"
+            style={linkStyle}
+            onClick={handleClick}
+            onMouseLeave={hideEl}
+          >
             Slider
           </NavLink>
         </li>
       </ul>
-      <div className={styles.contentWrapper}>
+      <div
+        className={`${styles.contentWrapper} ${show ? styles.show : ""}`}
+        onMouseEnter={() => setShow(true)}
+      >
         <Routes>
           <Route index element={<ComponentsHomePage />} />
           <Route path="/usercard" element={<UserCard user={user} />} />
