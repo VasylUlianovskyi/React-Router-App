@@ -133,19 +133,18 @@ table {
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
+html {
+  background: #3ea9f5;
+  display: flex;
+  justify-content: center;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  flex: 1 1 auto
-}
+  height: 100vh;
+  color: white;
+  font-size: 24px;
+  width: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-.mainContent {
-  flex: 1 1 auto;
+
 }

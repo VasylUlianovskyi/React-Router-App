@@ -1,0 +1,95 @@
+.signupContainer
+  width: 800px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 10px
+
+h2,p
+  text-align: center
+
+h2
+  font-weight: bolder
+  font-size: 48px
+
+p
+  font-size: 13px
+
+.form
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 26px
+  position: relative
+
+.input
+  width: 330px
+  padding: 15px
+  border: 1px solid transparent
+  border-radius: 2px
+  outline: none
+.radioGroup
+  width: 86%
+  font-size: 14px
+  padding: 13px
+  border: 1px solid white
+  position: relative
+
+  .radioElDescript
+    position: absolute
+    font-size: 14px
+    top: 16px
+    left: 14px
+
+  span
+    font-size: 8px
+    margin-left: 20px
+    position: absolute
+    bottom: 3px
+    left: 13px
+
+.checkboxGroup
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 86%
+  font-size: 13px
+
+  a
+    color: white
+    margin-left: 3px
+
+.submitButton
+  padding: 20px
+  background: #28d2d0
+  width: 86%
+  border: none
+  border-radius: 3px
+  font-weight: bolder
+  color: white
+  cursor: pointer
+
+.valid
+  outline: 2px solid green
+
+.invalid
+
+  outline: 3px solid red
+
+.emailError, .passwordError, .confirmPasswrdError
+  color: red
+  position: absolute
+  font-size: 14px
+
+.emailError
+  top: 27%
+  right: 20%
+
+.passwordError
+  top: 43%
+  left: 18%
+
+.confirmPasswrdError
+  top: 43%
+  right: 18%
